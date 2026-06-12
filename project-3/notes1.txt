@@ -1,0 +1,5 @@
+Docker Notes
+
+Docker is a platform used to build, ship, and run applications in containers.
+
+Containers are lightweight and portable.

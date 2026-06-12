@@ -1,0 +1,5 @@
+Data Persistence
+
+Data stored only inside a container is lost when the container is removed.
+
+Volumes and bind mounts help preserve data.

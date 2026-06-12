@@ -1,0 +1,5 @@
+Volumes and Bind Mounts
+
+A bind mount links a host directory to a container directory.
+
+Changes made on either side are visible immediately.

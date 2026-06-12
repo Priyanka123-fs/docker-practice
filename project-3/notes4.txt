@@ -1,0 +1,4 @@
+Docker Persistence Test
+
+This file was created inside the container.
+The file should remain after container recreation.
