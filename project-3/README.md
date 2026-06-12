@@ -24,7 +24,7 @@ project-3/
 ### Run Container with Bind Mount
 
 ```bash
-docker run -it -v "C:\Users\Dell\OneDrive\Documents\devopselearningpractice\project-3:/opt/data" ubuntu bash
+docker run -it -v "C:\Users\devopselearningpractice\project-3:/opt/data" ubuntu bash
 ```
 
 ### Verify Files
