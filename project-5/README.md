@@ -63,9 +63,9 @@ Added sample records into the table.
 
 | ID | Name  | Age |
 | -- | ----- | --- |
-| 1  | Ravi  | 20  |
+| 1  | Raja  | 20  |
 | 2  | Priya | 21  |
-| 3  | Arun  | 22  |
+| 3  | Maha | 22  |
 
 ### 8. Viewed Records
 
