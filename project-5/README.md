@@ -157,9 +157,9 @@ CREATE TABLE students (
 
 ```sql
 INSERT INTO students VALUES
-(1, 'Ravi', 20),
+(1, 'Raja', 20),
 (2, 'Priya', 21),
-(3, 'Arun', 22);
+(3, 'Maha', 22);
 ```
 
 ### View Records
