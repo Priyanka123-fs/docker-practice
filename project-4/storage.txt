@@ -1,0 +1,124 @@
+Project 4: Shared Storage Between Containers
+
+OBJECTIVE
+
+The objective of this project is to learn how multiple Docker containers can share and access the same data using a Docker Volume.
+
+TECHNOLOGIES USED
+
+Docker
+Ubuntu Image
+Docker Volumes
+
+PROJECT OVERVIEW
+
+In this project, two Ubuntu containers were connected to the same Docker volume. Files created and modified in one container were immediately visible in the other container, demonstrating shared storage and multi-container interaction.
+
+STEPS PERFORMED
+
+1. Create a Docker Volume
+
+A Docker volume named "shared-notes" was created to store shared data.
+
+2. Create Container 1
+
+A container was started and the shared volume was mounted inside the container.
+
+3. Create Container 2
+
+A second container was started using the same volume.
+
+4. Create a Shared File
+
+Inside Container 1, a file named "shared-note.txt" was created.
+
+5. Verify from Container 2
+
+The file was accessed from Container 2, confirming that both containers could read the same data.
+
+6. Modify the File
+
+Container 2 appended additional content to the file.
+
+7. Verify Changes
+
+Container 1 successfully viewed the updated content, proving that both containers were using the same shared storage.
+
+8. Create Additional Files
+
+container1.txt was created from Container 1.
+
+container2.txt was created from Container 2.
+
+Both files were visible from both containers.
+
+9. Test Persistence
+
+The containers were removed and recreated using the same Docker volume. All files remained available, confirming data persistence.
+
+COMMANDS USED
+
+Create Volume
+
+docker volume create shared-notes
+
+Run Container 1
+
+docker run -it --name container1 -v shared-notes:/opt/data ubuntu bash
+
+Run Container 2
+
+docker run -it --name container2 -v shared-notes:/opt/data ubuntu bash
+
+View Files
+
+cd /opt/data
+ls
+
+Read File
+
+cat shared-note.txt
+
+KEY CONCEPTS LEARNED
+
+Docker Volume
+
+A Docker Volume is a Docker-managed storage location that persists independently of containers.
+
+Shared Storage
+
+Multiple containers can mount the same volume and access the same files.
+
+Data Persistence
+
+Data stored in a volume remains available even after containers are removed and recreated.
+
+Multi-Container Interaction
+
+Containers can communicate indirectly by reading and writing shared files within the same volume.
+
+RESULTS
+
+Successfully shared data between two containers.
+
+Verified that changes made in one container were visible in another container.
+
+Demonstrated Docker volume persistence.
+
+Learned how shared storage works in containerized environments.
+
+SKILLS GAINED
+
+Docker Volumes
+
+Shared Storage
+
+Multi-Container Interaction
+
+Data Persistence
+
+Volume Management
+
+CONCLUSION
+
+This project demonstrated how Docker volumes enable multiple containers to share and access the same data. By using a shared volume, changes made in one container were immediately visible in another, providing practical experience with shared storage and persistent data management in Docker.
